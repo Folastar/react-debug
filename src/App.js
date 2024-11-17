@@ -6,7 +6,7 @@ function App() {
   const [user, setUser] = useState({ name: "Alice", age: 25 });
 
   const updateUser = () => {
-    setUser({ ...user, name: "Bob" });
+    setUser((prevUser) => ({ ...prevUser, name: "Bob" }))
   };
 
   return (
